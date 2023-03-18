@@ -44,9 +44,6 @@ def main():
         with open(folder + filename, 'r') as test:
             n = int(test.readline())
             data = list(map(int, test.readline().strip().split()))
-    else:
-        print("Invalid input")
-        return
     
 
 
