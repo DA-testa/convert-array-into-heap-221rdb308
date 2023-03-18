@@ -34,11 +34,11 @@ def main():
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-    input = input("Input I for keyboard and F for file input")
-    if input == "I":
+    input_type = input("Input I for keyboard and F for file input")
+    if input_type == "I":
         n = int(input())
         data = list(map(int, input().split()))
-    elif input == "F":
+    elif input_type == "F":
         filename = input("Enter filename:")
         folder = './test/'
         with open(folder + filename, 'r') as test:
