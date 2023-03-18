@@ -38,12 +38,16 @@ def main():
     if input_type == "I":
         n = int(input())
         data = list(map(int, input().split()))
+        assert len(data) == n
+        break
     elif input_type == "F":
         filename = input("Enter filename:")
         folder = './test/'
         with open(folder + filename, 'r') as test:
             n = int(test.readline())
             data = list(map(int, test.readline().strip().split()))
+            assert len(data) == n
+            break
     
 
 
@@ -51,7 +55,7 @@ def main():
     
 
     # checks if lenght of data is the same as the said lenght
-    assert len(data) == n
+    
 
     # calls function to assess the data 
     # and give back all swaps
