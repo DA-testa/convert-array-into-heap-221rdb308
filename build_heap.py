@@ -35,7 +35,7 @@ def main():
         data = list(map(int, input().split()))
     else:
         filename = input("Enter filename:")
-        folder = './test/'
+        folder = './tests/'
         with open(folder + filename, 'r') as test:
             n = int(test.readline())
             data = list(map(int, test.readline().strip().split()))
