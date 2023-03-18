@@ -48,6 +48,9 @@ def main():
             data = list(map(int, test.readline().strip().split()))
             assert len(data) == n
             break
+     else:
+        print("Invalid input choice, please enter 'I' or 'F'")
+
     
 
 
