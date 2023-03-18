@@ -37,7 +37,7 @@ def main():
     else:
         filename = input("Enter filename:")
         folder = './tests/'
-        with open(folder + filename, 'r') as test:
+        with open(folder + filename.strip(), 'r') as test:
             n = int(test.readline())
             data = list(map(int, test.readline().strip().split()))
     assert len(data) == n
