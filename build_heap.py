@@ -18,8 +18,6 @@ def sort(i, n, data, swaps):
 
 def build_heap(data):
     swaps = []
-    # TODO: Creat heap and heap sort
-    # try to achieve  O(n) and not O(n2)
     n = len(data)
     for i in range(n // 2, -1, -1):
         sort(i, n, data, swaps)
@@ -31,37 +29,17 @@ def build_heap(data):
 
 def main():
     
-    # TODO : add input and corresponding checks
-    # add another input for I or F 
-    # first two tests are from keyboard, third test is from a file
     input_type = input("Input I for keyboard and F for file input")
     if input_type == "I":
         n = int(input())
         data = list(map(int, input().split()))
-        assert len(data) == n
-        break
-    elif input_type == "F":
+    else:
         filename = input("Enter filename:")
         folder = './test/'
         with open(folder + filename, 'r') as test:
             n = int(test.readline())
             data = list(map(int, test.readline().strip().split()))
-            assert len(data) == n
-            break
-     else:
-        print("Invalid input choice, please enter 'I' or 'F'")
-
-    
-
-
-    # input from keyboard
-    
-
-    # checks if lenght of data is the same as the said lenght
-    
-
-    # calls function to assess the data 
-    # and give back all swaps
+    assert len(data) == n
     swaps = build_heap(data)
 
     # TODO: output how many swaps were made, 
