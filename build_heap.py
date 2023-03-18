@@ -29,17 +29,18 @@ def build_heap(data):
 
 def main():
     
-    input_type = input("Input I for keyboard and F for file input:")
-    if input_type == "I":
+    print("Input Input type:")
+    input_type = input()
+    if "I" in input_type:
         print("Input data:")
         n = int(input())
         data = list(map(int, input().split()))
     else:
         filename = input("Enter filename:")
         folder = './tests/'
-        with open(folder + filename.strip(), 'r') as test:
+        with open(folder + filename, 'r') as test:
             n = int(test.readline())
-            data = list(map(int, test.readline().strip().split()))
+            data = list(map(int, test.readline().split()))
     assert len(data) == n
     swaps = build_heap(data)
 
